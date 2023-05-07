@@ -4,5 +4,17 @@
  * @return {string}
  */
 var replaceSpace = function (s) {
-  return s.replace(/ /g, "%20");
+  let newStr = "";
+  for (let index = 0; index < s.length; index++) {
+    if (s[index] === " ") {
+      newStr += "%20";
+    } else {
+      newStr += s[index];
+    }
+  }
+  return newStr;
+  // 2. return s.replace(/ /g, "%20");
 };
+
+let a = "12   3 4";
+console.log(replaceSpace(a), "la");
